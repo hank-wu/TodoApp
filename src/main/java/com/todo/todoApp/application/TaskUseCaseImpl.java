@@ -16,4 +16,9 @@ public class TaskUseCaseImpl implements TaskUseCaseInterface{
     public List<Task> read() {
         return taskRepository.select();
     }
+
+    @Override
+    public void add(Task task) {
+        taskRepository.insert(task);
+    }
 }

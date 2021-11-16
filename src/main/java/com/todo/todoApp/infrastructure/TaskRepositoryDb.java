@@ -27,4 +27,14 @@ public class TaskRepositoryDb implements TaskRepository {
         }
         return tasks;
     }
+
+    @Override
+    public void insert(Task task) {
+        TaskDto taskDto = new TaskDto(task.getId(),
+                                        task.getTitle(),
+                                        task.getDone_flg(),
+                                        task.getTime_limit()
+                                        );
+        taskMapper.insert(taskDto);
+    }
 }

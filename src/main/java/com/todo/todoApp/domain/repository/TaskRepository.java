@@ -5,5 +5,6 @@ import com.todo.todoApp.domain.model.Task;
 import java.util.List;
 
 public interface TaskRepository {
-    List<Task> select();
+    public List<Task> select();
+    public void insert(Task task);
 }
