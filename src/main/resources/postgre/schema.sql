@@ -3,5 +3,5 @@ CREATE TABLE IF NOT EXISTS tasks (
 --    USER_ID varchar2(50) NOT NULL,
     title varchar(40),
     done_flg numeric(1) default 0,
-    time_list date
+    time_limit date
 );
