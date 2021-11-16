@@ -1,2 +1,4 @@
-INSERT INTO tasks (title,time_limit)
-    VALUES (#{title},to_date(#{time_limit},'yyyy-mm-dd'))
+INSERT INTO tasks (title, time_limit)
+    VALUES (/*[# mb:p="taskDto.title"]*/ 'title' /*[/]*/,
+            /*[# mb:p="taskDto.time_limit"]*/ 'time_limit' /*[/]*/
+    );

@@ -7,4 +7,8 @@ import java.util.List;
 public interface TaskRepository {
     public List<Task> select();
     public void insert(Task task);
+    void update(Task task);
+    List<Task> selectIncompleteTasks();
+    List<Task> selectCompleteTasks();
+    void deleteCompleteTasks();
 }

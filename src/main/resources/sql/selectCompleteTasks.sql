@@ -1,0 +1,1 @@
+SELECT * FROM tasks where done_flg = 1

@@ -21,4 +21,25 @@ public class TaskUseCaseImpl implements TaskUseCaseInterface{
     public void add(Task task) {
         taskRepository.insert(task);
     }
+
+    @Override
+    public void update(Task task) {
+        taskRepository.update(task);
+    }
+
+    @Override
+    public List<Task> readIncompleteTasks() {
+        return taskRepository.selectIncompleteTasks();
+    }
+
+    @Override
+    public List<Task> readCompleteTasks() {
+        return taskRepository.selectCompleteTasks();
+    }
+
+    @Override
+    public void delete() {
+        taskRepository.deleteCompleteTasks();
+    }
+
 }
